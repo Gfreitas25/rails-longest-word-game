@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+   
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -7,4 +9,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get 'games/new', to: "games#new", as: :game_new
+  post 'games/score', to: "games#score", as: :game_score
+  get 'games/score', to: "games#score"
+
 end
